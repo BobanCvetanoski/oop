@@ -1,13 +1,10 @@
 import java.util.*;
-
 class Covek {
     private String ime;
-
     public void setName(String name) { this.ime = name; }
     public String getName() { return ime; }
     public String toString() { return ime; }
 }
-
 class Ocena {
     private int vrednost;
     private String datum;
@@ -17,7 +14,6 @@ class Ocena {
         this.datum = datum;
         this.predmet = predmet;
     }
-
     public int getVrednost() { return vrednost; }
     public String getDatum() { return datum; }
     public String getPredmet() { return predmet; }
@@ -25,7 +21,6 @@ class Ocena {
         return datum + " " + predmet + " " + String.valueOf(vrednost);
     }
 }
-
 class Student extends Covek {
     private String indeks;
     private Ocena ocenki [] = new Ocena[100];
@@ -37,7 +32,6 @@ class Student extends Covek {
         ocenki[num] = o;
         num++;
     }
-
     public float getProsek(){
         int total = 0;
         for (int i = 0; i < num; i++){
@@ -45,27 +39,22 @@ class Student extends Covek {
         }
         return (float) total / num;
     }
-
     public String toString() {
         return this.getName() + " " + indeks + " " + String.valueOf(getProsek());
     }
 }
-
 public class Main
 {
     public static void main(String[] args) {
-        Student Naum = new Student();
-        Naum.setIndeks("INKI 756");
-        Naum.setName("Naum Trpezanovski ");
-
+        Student Boban = new Student();
+        Boban.setIndeks("INKI 638");
+        Boban.setName("Boban Cvetanoski ");
         Ocena oop = new Ocena();
         oop.setOcena(7, "17.09.2021 12:36:53", "Aplikativen Softver");
-        Naum.setOcena(oop);
-
+        Boban.setOcena(oop);
         Ocena sp = new Ocena();
         sp.setOcena(7, "14.06.2021 10:17:28", "Matematika 2");
-        Naum.setOcena(sp);
-
-        System.out.println(Naum.toString());
+        Boban.setOcena(sp);
+        System.out.println(Boban.toString());
     }
 }
