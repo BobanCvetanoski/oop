@@ -1,9 +1,7 @@
 class Vraboten {
     public String Ime;
     public String Prezime;
-
     public String Plata;
-
 
     public Vraboten(String ime, String prezime, String plata) {
         Ime = ime;
@@ -31,7 +29,7 @@ class Vraboten {
         return Plata;
     }
 
-    public void setMatBr(String plata) {
+    public void setPlata(String plata) {
         Plata = plata;
     }
 
