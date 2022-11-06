@@ -1,32 +1,35 @@
-package zad.dvacetiri;
+import java.sql.SQLOutput;
 
 public class Main {
     public static void main (String[] args){
         Avtomobil VW= new Avtomobil();
-        VW.Marka = "Polo";
-        VW.Model = "1.0 MPI Trendline";
-        VW.PomKm = "178000";
+        VW.Marka = "Golf";
+        VW.Model = "Golf 6 R line";
+        VW.PomKm = "235000";
 
         System.out.println("Marka na Avtomobilot e : " + VW.Marka +".");
-        System.out.println("Modelot na " + VW.Marka + "-to e " + VW.Model +".");
+        System.out.println("Modelot na " + VW.Marka + ".");
         System.out.println("Negovite Pominati Kilometri se " + VW.PomKm +"km.");
 
-        System.out.println("**************************************");
+        System.out.println("");
 
-        Avtomobil Opel = new Avtomobil("Insignia", "2.8T 4x4","150000");
-        System.out.println("Markata na ovoj avtomobil e " + Opel.Marka +"." );
-        System.out.println("Modelot na " + Opel.Marka+"-ta e " + Opel.Model+".");
-        System.out.println("Pominatite kilometri se " + Opel.PomKm +"km.");
+        Avtomobil Audi = new Avtomobil("Audi", "RS7", "201500");
+        System.out.println("Markata na avtomobilot e: " + Audi.Marka + ", Modelot e: "+ Audi.Model + ", Negovite pominati kilometri se: " + Audi.PomKm + "km.");
+
+        System.out.println("");
+
+        Avtomobil BMW = new Avtomobil("BMW" , "535d" , "360000");
+        System.out.println("Vozam avtomobil " + BMW.Marka + ", Modelot e: " + BMW.Model + ", i e so pominati kilometri " + BMW.PomKm + "km.");
 
 
     }
 }
-package zad.dvacetiri;
 
-public class Avtomobil {
+class Avtomobil {
     public String Marka;
     public String Model;
     public String PomKm;
+
 
     public Avtomobil (){
 
